@@ -31,7 +31,9 @@
               </li>
             </ul>
           </nav>
-          <button class="button" type="button">Order a call</button>
+          <button class="button modal-btn-open" type="button">
+            Order a call
+          </button>
         </div>
       </div>
     </header>
@@ -78,30 +80,52 @@
       </section>
       <section class="section" id="chefs-section">
         <div class="container">
-          <h2 class="chefs-title section-title">
-            The Best <span class="accent">Chefs</span>
+          <h2 class="chefs-title section-title centered">
+            The Best
+            <span class="accent">Chefs</span>
           </h2>
-          <ul>
-            <li>
-              <article>
-                <h3 class="chef-title">Nastya</h3>
-                <p>Hello, I'm Nastya!</p>
-                <p>
-                  For 10 years, I have been making life interesting and
-                  delicious ideas
-                </p>
-                <p>I will bake the most delicious products for you!</p>
+          <ul class="chefs-list">
+            <li class="chefs-item">
+              <article class="chef-card">
+                <img
+                  class="chef-photo"
+                  src="./images/nastya-chef.jpg"
+                  alt="Nastya-chef"
+                />
+                <div>
+                  <h3 class="chef-title">Nastya</h3>
+                  <div class="chef-text">
+                    <p class="chef-text">Hello, I'm Nastya!</p>
+                    <p class="chef-text">
+                      For 10 years, I have been making life interesting and
+                      delicious ideas
+                    </p>
+                    <p class="chef-text">
+                      I will bake the most delicious products for you!
+                    </p>
+                  </div>
+                </div>
               </article>
             </li>
-            <li>
-              <article>
-                <h3 class="chef-title">Vlad</h3>
-                <p>Hello, I'm Vlad!</p>
-                <p>
-                  I have been a pastry chef for 18 years. SHOP BAKERY is our
-                  love, which we share with you every time through our pastries!
-                </p>
-                <p>I will make a unique filling for you for any taste!</p>
+            <li class="chefs-item">
+              <article class="chef-card">
+                <img
+                  class="chef-photo"
+                  src="./images/vlad-chef.jpg"
+                  alt="Vlad-chef"
+                />
+                <div>
+                  <h3 class="chef-title">Vlad</h3>
+                  <p class="chef-text">Hello, I'm Vlad!</p>
+                  <p class="chef-text">
+                    I have been a pastry chef for 18 years. SHOP BAKERY is our
+                    love, which we share with you every time through our
+                    pastries!
+                  </p>
+                  <p class="chef-text">
+                    I will make a unique filling for you for any taste!
+                  </p>
+                </div>
               </article>
             </li>
           </ul>
@@ -109,116 +133,253 @@
       </section>
       <section class="section" id="format-section">
         <div class="container">
-          <h2 class="formats-title section-title">Formats</h2>
-          <ul class="formats-list">
-            <li class="format-item">
-              <article class="format-card">
-                <h3 class="format-title">Walrus</h3>
-                <div class="format-text">
-                  <p>Area: up to 120 m2.</p>
-                  <p>Menu: extended menu</p>
-                  <p>
-                    Staff: 2 salespeople-cashiers, 2 bakers, 2 baker's
-                    assistants, 2 waiters-handymen
-                  </p>
-                  <p>Bording seats: there are</p>
-                </div>
-              </article>
-            </li>
-            <li class="format-item">
-              <article class="format-card">
-                <h3 class="format-title">Horseshoe</h3>
-                <div class="format-text">
-                  <p>Area: up to 120 m2.</p>
-                  <p>Menu: extended menu</p>
-                  <p>
-                    Staff: 2 salespeople-cashiers, 2 bakers, 2 baker's
-                    assistants, 2 waiters-handymen
-                  </p>
-                  <p>Bording seats: there are</p>
-                </div>
-              </article>
-            </li>
-            <li class="format-item">
-              <article class="format-card">
-                <h3 class="format-title">Handlebar</h3>
-                <div class="format-text">
-                  <p>Area: up to 120 m2.</p>
-                  <p>Menu: extended menu</p>
-                  <p>
-                    Staff: 2 salespeople-cashiers, 2 bakers, 2 baker's
-                    assistants, 2 waiters-handymen
-                  </p>
-                  <p>Bording seats: there are</p>
-                </div>
-              </article>
-            </li>
-          </ul>
+          <h2 class="formats-title section-title centered">Formats</h2>
+          <div class="formats-container">
+            <button class="carousel-button" type="button">
+              <svg class="carousel-arrow" width="16" height="16">
+                <use href="./images/svg-sprite.svg#icon-Arrow"></use>
+              </svg>
+            </button>
+            <ul class="formats-list">
+              <li class="format-item">
+                <article class="format-card">
+                  <h3 class="format-title">Walrus</h3>
+                  <div class="format-text">
+                    <p>Area: up to 120 m2.</p>
+                    <p>Menu: extended menu</p>
+                    <p>
+                      Staff: 2 salespeople-cashiers, 2 bakers, 2 baker's
+                      assistants, 2 waiters-handymen
+                    </p>
+                    <p>Bording seats: there are</p>
+                  </div>
+                </article>
+              </li>
+              <li class="format-item">
+                <article class="format-card">
+                  <h3 class="format-title">Horseshoe</h3>
+                  <div class="format-text">
+                    <p>Area: up to 120 m2.</p>
+                    <p>Menu: extended menu</p>
+                    <p>
+                      Staff: 2 salespeople-cashiers, 2 bakers, 2 baker's
+                      assistants, 2 waiters-handymen
+                    </p>
+                    <p>Bording seats: there are</p>
+                  </div>
+                </article>
+              </li>
+              <li class="format-item">
+                <article class="format-card">
+                  <h3 class="format-title">Handlebar</h3>
+                  <div class="format-text">
+                    <p>Area: up to 120 m2.</p>
+                    <p>Menu: extended menu</p>
+                    <p>
+                      Staff: 2 salespeople-cashiers, 2 bakers, 2 baker's
+                      assistants, 2 waiters-handymen
+                    </p>
+                    <p>Bording seats: there are</p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            <button class="carousel-button next" type="button">
+              <svg width="16" height="16">
+                <use href="./images/svg-sprite.svg#icon-Arrow"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
-      <section class="section" id="contact-section">
+      <section class="contact-section section" id="contact-section">
         <div class="container">
-          <h2 class="contact-title section-title">Join to Bakery Network</h2>
-          <p>Fill out the form so we can contact you!</p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.163447036115!2d30.48869837606083!3d50.45668098691572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2sSichovykh%20Striltsiv%20St%2C%2054%2C%20Kyiv%2C%20Ukraine%2C%2002000!5e0!3m2!1sen!2sus!4v1762134640890!5m2!1sen!2sus"
-            width="603"
-            height="595"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="contact-container">
+            <div class="contact-form">
+              <h2 class="contact-title section-title">
+                Join to Bakery Network
+              </h2>
+              <p>Fill out the form so we can contact you!</p>
+              <form name="contact-form" autocomplete="off">
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-name">
+                    Name
+                  </label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                    placeholder="Name"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-tel">
+                    Phone
+                  </label>
+                  <input
+                    class="form-input"
+                    type="tel"
+                    id="user-tel"
+                    name="user-tel"
+                    placeholder="Phone"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-email">
+                    Email
+                  </label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="user-email"
+                    name="user-email"
+                    placeholder="Email"
+                  />
+                </div>
+
+                <button class="button form-button" type="submit">
+                  Order a call
+                </button>
+                <p class="form-terms">
+                  By clicking the button I agree to
+                  <a class="form-terms-link" href="#">Privacy Policy</a>
+                </p>
+              </form>
+            </div>
+            <iframe
+              class="contact-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.163447036115!2d30.48869837606083!3d50.45668098691572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2sSichovykh%20Striltsiv%20St%2C%2054%2C%20Kyiv%2C%20Ukraine%2C%2002000!5e0!3m2!1sen!2sus!4v1762134640890!5m2!1sen!2sus"
+              width="603"
+              height="595"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="container">
-        <nav>
-          <a href="#">
-            <img src="./images/logo.svg" alt="Modern Bakery Logo" />
-          </a>
-          <ul>
-            <li><a class="link" href="#">Our traditions</a></li>
-            <li><a class="link" href="#">Chefs</a></li>
-            <li><a class="link" href="#">Formats</a></li>
-            <li><a class="link" href="#">Contacts</a></li>
-          </ul>
-        </nav>
-        <address>
-          <ul>
-            <li>
-              <a class="address-link" href="tel:+380960000007"
-                >+ 38 (096) 000 00 07</a
-              >
-            </li>
-            <li>
-              <a class="address-link" href="mailto:shopbakery@gmail.com"
-                >shopbakery@gmail.com</a
-              >
-            </li>
-            <li>
-              <a
-                class="address-link"
-                href="https://maps.app.goo.gl/7DNYmtv3Ei4MRyc56"
-                target="_blank"
-              >
-                Ukraine, Kyiv, Sichovykh Striltsiv St.54</a
-              >
-            </li>
-            <li>
-              <a href="#"></a>
-              <!-- facebook icon -->
-            </li>
-            <li>
-              <a href="#"></a>
-              <!-- instagram icon -->
-            </li>
-          </ul>
-          <a class="address-link" href="#" target="_blank">Privacy Policy</a>
-          <p class="address-copyright">&copy; 2022 Data protected</p>
-        </address>
+        <div class="footer-container">
+          <nav class="footer-nav">
+            <div class="footer-logo">
+              <a href="#">
+                <img src="./images/logo.svg" alt="Modern Bakery Logo" />
+              </a>
+            </div>
+            <ul class="footer-menu">
+              <li><a class="link" href="#">Our traditions</a></li>
+              <li><a class="link" href="#">Chefs</a></li>
+              <li><a class="link" href="#">Formats</a></li>
+              <li><a class="link" href="#">Contacts</a></li>
+            </ul>
+          </nav>
+          <address class="footer-address">
+            <ul class="address-list">
+              <li>
+                <a class="address-link" href="tel:+380960000007"
+                  >+ 38 (096) 000 00 07</a
+                >
+              </li>
+              <li>
+                <a class="address-link" href="mailto:shopbakery@gmail.com"
+                  >shopbakery@gmail.com</a
+                >
+              </li>
+              <li>
+                <a
+                  class="address-link"
+                  href="https://maps.app.goo.gl/7DNYmtv3Ei4MRyc56"
+                  target="_blank"
+                >
+                  Ukraine, Kyiv, Sichovykh Striltsiv St.54</a
+                >
+              </li>
+              <li>
+                <a href="#"></a>
+                <svg class="address-icon" width="32" height="32">
+                  <use href="./images/svg-sprite.svg#icon-facebook"></use>
+                </svg>
+              </li>
+              <li>
+                <a href="#"></a>
+                <svg class="address-icon" width="32" height="32">
+                  <use href="./images/svg-sprite.svg#icon-instagram"></use>
+                </svg>
+              </li>
+            </ul>
+            <div class="address-info">
+              <a class="address-link" href="#" target="_blank"
+                >Privacy Policy
+              </a>
+              <p class="address-copyright">&copy; 2022 Data protected</p>
+            </div>
+          </address>
+        </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+        <h2>Order A Call</h2>
+        <p>Leave a request and our specialist will contact you!</p>
+        <form name="modal-form" autocomplete="off">
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-name">
+              Name
+            </label>
+            <input
+              class="form-input"
+              type="text"
+              id="user-name"
+              name="user-name"
+              placeholder="Name"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-tel">
+              Phone
+            </label>
+            <input
+              class="form-input"
+              type="tel"
+              id="user-tel"
+              name="user-tel"
+              placeholder="Phone"
+              pattern="^\+[0-9]{12}"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-email">
+              Email
+            </label>
+            <input
+              class="form-input"
+              type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <button class="button form-button" type="submit">Order a call</button>
+          <p class="form-terms">
+            By clicking the button I agree to
+            <a class="form-terms-link" href="#">Privacy Policy</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
